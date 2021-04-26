@@ -1,0 +1,35 @@
+<html>
+<style>
+	body { background: black; color: #d0d0d0; }
+	#frameTrace { background: #000030; border: 1px solid white; padding: 2px;}
+	#frameTrace div { padding: 2px;}
+	#frameTrace div:nth-child(2n) { background: #000070; }
+
+	.bindFramebuffer, .useProgram { background: #800060 !important; }
+	.bindFramebuffer:nth-child(2n), .useProgram:nth-child(2n) { background: #800040 !important; }
+
+	.getError { margin-left: 10px; }
+	.getSupportedExtensions_ret { margin-left: 20px; }
+
+	.rightArrow { color: #ff00ff; }
+	.returnValue { font-size: small; }
+	.functionName { color: white; }
+	.functionArgName, .hex { font-size: x-small; color: #d0d0d0; }
+	.functionArgs { color: white; }
+
+	.shaderSource .string { font-family: monospace; display: block; margin: 10px; }
+	.debugFunction { background: #400000 !important; }
+	.debugFunction:nth-child(2n) { background: #500000 !important; }
+	.resourceAllocFunction { background: #404000 !important; }
+	.resourceAllocFunction:nth-child(2n) { background: #505000 !important; }
+	.memoryOpCommand { background: #400040 !important; }
+	.memoryOpCommand:nth-child(2n) { background: #500050 !important; }
+	.drawCommand { border-bottom: 1px solid green; margin-bottom: 15px; color: white; background: #409040 !important; }
+</style>
+<body>
+WebGL debugger
+<select id="frameNumber" onchange='webglDebugger.printFrameTrace(value);'></select>
+
+<div id='frameTrace'></div>
+</body>
+</html>
